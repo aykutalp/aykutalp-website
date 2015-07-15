@@ -1,15 +1,12 @@
 $(document).ready(function(){
-
 	//ScrollTo codes
 	$("nav a,h1 a").click(function(e){
-	
 		$.scrollTo(this.hash || 0, 1500, {offset: {"left":0, "top":-100}});
 		e.preventDefault();
 		
 		if(window.innerWidth < 768){
 			$("nav").hide();
 		};
-
 	});
 
 	//Header colors - Function 
@@ -42,7 +39,6 @@ $(document).ready(function(){
 		$(".articleBodyMain").show().animate({"opacity":"1","padding-top":($(window).height()-100)/3+"px"},1000);
 		$(".articleBody").show().animate({"opacity":"1","padding-top":($(window).height()-520)/3+"px"},1000);
 	}
-	
 	sizeContent();
 	$(window).resize(sizeContent);
 
@@ -51,7 +47,6 @@ $(document).ready(function(){
 		$(this).find("h3").slideToggle("show");
 		},function(){
 		$(this).find("h3").slideToggle("hide");
-
 	});
 
 	//Nav menu for small size 
@@ -66,6 +61,5 @@ $(document).ready(function(){
 			$("nav").removeAttr("style");
 		};
 	});
-
 });
 
